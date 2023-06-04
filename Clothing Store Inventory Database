@@ -1,0 +1,40 @@
+--Create a clothing store inventory list
+/** Inventory List:
+Shirts (5)
+Pants (2)
+Sweaters (3)
+Shorts (5)
+Blouses (2)
+Hoodies (5)
+Pajamas (3)
+Leggings (4)
+Socks (5)
+Sweats (8)
+Joggers (5)
+Hats (3)
+Shoes (2)
+Tshirts (4)
+Sweatshirts (3)
+**/
+
+CREATE TABLE Inventory (ItemID INTEGER PRIMARY KEY, ITEM TEXT, QTY INTEGER, Aisle INTEGER, price INTEGER );
+
+INSERT INTO Inventory VALUES (1, "shirts", 5, 2, 3.00);
+INSERT INTO inventory VALUES (2, "pants", 2, 4, 5.00);
+INSERT INTO inventory VALUES (3, "sweaters", 3, 6, 2.00);
+INSERT INTO inventory VALUES (4, "shorts", 5, 2, 4.00);
+INSERT INTO inventory VALUES (5, "blouses", 2, 3, 4.00);
+INSERT INTO inventory VALUES (6, "hoodies", 5, 1, 3.00);
+INSERT INTO inventory VALUES (7, "pajamas", 3, 5, 3.00);
+INSERT INTO inventory VALUES (8, "leggings", 4, 2, 1.00);
+INSERT INTO inventory VALUES (9, "socks", 5, 4, 2.00);
+INSERT INTO inventory VALUES (10, "sweats", 8, 3, 1.00);
+INSERT INTO inventory VALUES (11, "joggers", 5, 2, 1.00);
+INSERT INTO inventory VALUES (12, "hats", 3, 2, 6.00);
+INSERT INTO inventory VALUES (13, "shoes", 2, 1, 3.00);
+INSERT INTO inventory VALUES (14, "Tshirts", 4, 4, 4.00);
+INSERT INTO inventory VALUES (15, "sweatshirts", 3, 2, 1.00);
+
+--Display the sum of items and ordered by price
+
+SELECT SUM(QTY) FROM inventory ORDER BY price
